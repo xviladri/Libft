@@ -6,7 +6,7 @@
 /*   By:  xviladri < xviladri@student.42barcelona.c +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/04 12:47:30 by xviladri          #+#    #+#             */
-/*   Updated: 2024/10/14 05:19:17 by xviladri         ###   ########.fr       */
+/*   Updated: 2024/10/14 05:20:41 by xviladri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,5 @@ char	*ft_strdup(const char *s)
 		i++;
 	}
 	p[i] = '\0';
-	return (c);
+	return (p);
 }
