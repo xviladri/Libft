@@ -6,7 +6,7 @@
 /*   By:  xviladri < xviladri@student.42barcelona.c +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/04 12:47:30 by xviladri          #+#    #+#             */
-/*   Updated: 2024/10/14 05:17:22 by xviladri         ###   ########.fr       */
+/*   Updated: 2024/10/14 05:19:17 by xviladri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,9 @@ char	*ft_strdup(const char *s)
 	i = 0;
 	while (s[i])
 	{
-		c[i] = s[i];
+		p[i] = s[i];
 		i++;
 	}
-	c[i] = '\0';
+	p[i] = '\0';
 	return (c);
 }
