@@ -6,7 +6,7 @@
 /*   By:  xviladri < xviladri@student.42barcelona.c +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/11 15:46:16 by xviladri          #+#    #+#             */
-/*   Updated: 2024/10/14 05:30:41 by xviladri         ###   ########.fr       */
+/*   Updated: 2024/10/14 05:36:55 by xviladri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,11 @@ static int	digit_count(int num)
 		i++;
 	if (num < 0)
 	{
-		i++;
 		p = -num;
+		i++;
 	}
 	p = num;
-	while (p >= 10)
+	while (p > 0)
 	{
 		p = p / 10;
 		i++;
