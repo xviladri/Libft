@@ -6,7 +6,7 @@
 /*   By:  xviladri < xviladri@student.42barcelona.c +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/04 19:59:59 by xviladri          #+#    #+#             */
-/*   Updated: 2024/10/14 05:08:05 by xviladri         ###   ########.fr       */
+/*   Updated: 2024/10/14 05:28:09 by xviladri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_putnbr_fd(int n, int fd)
 
 	if (n == -2147483648)
 	{
-		write(fd, "-2147483648\n", 11);
+		write(fd, "-2147483648", 11);
 		return ;
 	}
 	if (n < 0)
@@ -28,7 +28,7 @@ void	ft_putnbr_fd(int n, int fd)
 	}
 	if (n > 9)
 	{
-		ft_putnbr_fd(n / 10, 1);
+		ft_putnbr_fd(n / 10, fd);
 		ft_putnbr_fd(n % 10, 1);
 	}
 	else
