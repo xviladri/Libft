@@ -6,31 +6,22 @@
 /*   By:  xviladri < xviladri@student.42barcelona.c +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/11 15:46:16 by xviladri          #+#    #+#             */
-/*   Updated: 2024/10/14 05:36:55 by xviladri         ###   ########.fr       */
+/*   Updated: 2024/10/14 05:54:56 by xviladri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-//#include <stdio.h>
-//#include <stdlib.h>
 
 static int	digit_count(int num)
 {
 	int				i;
-	unsigned int	p;
 
-	i = 1;
-	if (num == 0)
+	i = 0;
+	if (num <= 0)
 		i++;
-	if (num < 0)
+	while (num != 0)
 	{
-		p = -num;
-		i++;
-	}
-	p = num;
-	while (p > 0)
-	{
-		p = p / 10;
+		num = num / 10;
 		i++;
 	}
 	return (i);
@@ -42,8 +33,6 @@ char	*ft_itoa(int n)
 	unsigned int	p;
 	char			*new;
 
-	if (n == -2147483648)
-		return ("-2147483648");
 	len = digit_count(n);
 	new = (char *)malloc((len + 1) * sizeof(char));
 	if (!new)
@@ -52,11 +41,11 @@ char	*ft_itoa(int n)
 	p = (unsigned int)n;
 	if (n < 0)
 	{
-		p = -n;
 		new[0] = '-';
+		p = -n;
 	}
 	new[len] = '\0';
-	while (p)
+	while (p > 0)
 	{
 		new[--len] = p % 10 + '0';
 		p = p / 10;
@@ -66,10 +55,11 @@ char	*ft_itoa(int n)
 /*
 int	main(void)
 {
-	int	n = 0;
+	int		n;
 	char	*r;
 	
+	n = -9;
 	r = ft_itoa(n);
 	printf("%s", r);
-	return (0);	
+	return (0);
 }*/
