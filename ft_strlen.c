@@ -6,7 +6,7 @@
 /*   By:  xviladri < xviladri@student.42barcelona.c +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 16:45:46 by xviladri          #+#    #+#             */
-/*   Updated: 2024/10/13 21:23:45 by xviladri         ###   ########.fr       */
+/*   Updated: 2024/10/14 04:14:26 by xviladri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ size_t	ft_strlen(const char *str)
 	size_t	length;
 
 	length = 0;
+	if (!str)
+		return (0);
 	while (str[length])
 		length++;
 	return (length);
