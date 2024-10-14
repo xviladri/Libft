@@ -6,7 +6,7 @@
 /*   By:  xviladri < xviladri@student.42barcelona.c +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/04 19:59:59 by xviladri          #+#    #+#             */
-/*   Updated: 2024/10/13 20:50:13 by xviladri         ###   ########.fr       */
+/*   Updated: 2024/10/14 05:08:05 by xviladri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,10 @@ void	ft_putnbr_fd(int n, int fd)
 	char	c;
 
 	if (n == -2147483648)
+	{
 		write(fd, "-2147483648\n", 11);
-	return ;
+		return ;
+	}
 	if (n < 0)
 	{
 		write(fd, "-", 1);
