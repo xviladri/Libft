@@ -6,7 +6,7 @@
 /*   By: xviladri <xviladri@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/02 19:18:01 by xviladri          #+#    #+#             */
-/*   Updated: 2024/10/13 21:18:57 by xviladri         ###   ########.fr       */
+/*   Updated: 2024/10/14 05:10:32 by xviladri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,8 @@ int	ft_atoi(const char *nptr)
 		i++;
 	if (nptr[i] == '-' || nptr[i] == '+')
 	{
-		if (nptr[i] == '-')
+		if (nptr[i++] == '-')
 			signe = -1;
-		else
-			write(1, "+", 1);
-		i++;
 	}
 	while (nptr[i] >= '0' && nptr[i] <= '9')
 	{
