@@ -6,7 +6,7 @@
 /*   By:  xviladri < xviladri@student.42barcelona.c +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/02 13:51:35 by xviladri          #+#    #+#             */
-/*   Updated: 2024/10/13 20:42:02 by  xviladri        ###   ########.fr       */
+/*   Updated: 2024/10/14 04:54:53 by xviladri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 		if (s1[i] != (unsigned char)c)
 			i++;
 		else
-			return (&s1[i]);
+			return ((void *)&s1[i]);
 	}
 	return (NULL);
 }
