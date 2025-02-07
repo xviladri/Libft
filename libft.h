@@ -6,7 +6,7 @@
 /*   By: xviladri <xviladri@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/13 19:02:25 by xviladri          #+#    #+#             */
-/*   Updated: 2025/02/07 13:01:19 by rmarrero         ###   ########.fr       */
+/*   Updated: 2025/02/07 15:19:23 by rmarrero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef LIBFT_H
@@ -17,6 +17,10 @@
 # include <string.h>
 # include <stdlib.h>
 # include <limits.h>
+
+# ifndef SIZE_MAX
+#  define SIZE_MAX 4294967295
+# endif
 
 /* Bonus */
 /* Bonus struct  */
