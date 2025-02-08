@@ -6,7 +6,7 @@
 /*   By:  xviladri < xviladri@student.42barcelona.c +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/02 13:52:18 by xviladri          #+#    #+#             */
-/*   Updated: 2024/10/13 20:55:41 by xviladri         ###   ########.fr       */
+/*   Updated: 2025/02/07 15:20:18 by rmarrero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	p1 = (unsigned char *)s1;
 	p2 = (unsigned char *)s2;
 	i = 0;
-	while (i < n && (p1[i] || p2[i]))
+	while (i < n)// && (p1[i] || p2[i]))
 	{
 		if (p1[i] != p2[i])
 			return (p1[i] - p2[i]);

@@ -6,7 +6,7 @@
 /*   By:  xviladri < xviladri@student.42barcelona.c +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 15:08:05 by xviladri          #+#    #+#             */
-/*   Updated: 2024/10/13 21:05:57 by xviladri         ###   ########.fr       */
+/*   Updated: 2025/02/07 15:22:02 by rmarrero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,12 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	unsigned int	i;
 	unsigned int	j;
 
+	if (!s)
+		return (NULL);
+	if (start > ft_strlen(s))
+		return (ft_strdup(""));
+	if (len > ft_strlen(s + start))
+		len = ft_strlen(s + start);
 	copia = (char *)malloc((len + 1) * sizeof(char));
 	if (!copia)
 		return (NULL);
